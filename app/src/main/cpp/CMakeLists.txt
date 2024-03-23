@@ -26,7 +26,7 @@ project("cube")
 # used in the AndroidManifest.xml file.
 add_library(${CMAKE_PROJECT_NAME} SHARED
         # List C/C++ source files with relative paths to this CMakeLists.txt.
-        native-lib.cpp)
+        openglrenderer.cpp)
 
 # Specifies libraries CMake should link to your target library. You
 # can link libraries from various origins, such as libraries defined in this
@@ -37,4 +37,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
         log
         EGL
         GLESv2
-        jnigraphics)
+        GLESv3
+        jnigraphics
+        glfw3
+        OpenGL)
